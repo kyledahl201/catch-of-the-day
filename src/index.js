@@ -1,5 +1,10 @@
-// let's go!
+import React from 'react';
+import { render } from 'react-dom';
 
-console.log('test react')
-console.log('test git')
+class StorePicker extends React.Component {
+    render(){
+        return <p>Hello!</p>
+    }
+}
 
+render (<p>Hello world!</p>, document.querySelector('#main'));
