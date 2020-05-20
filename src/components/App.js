@@ -1,7 +1,8 @@
 import React from "react";
 import Header from './Header';
-import Inventory from "./Inventory";
 import Order from './Order';
+import Inventory from "./Inventory";
+
 
 
 class App extends React.Component {
@@ -9,11 +10,12 @@ class App extends React.Component {
             return(
                 <div className="catch-of-the-day">
                     <div className="menu">
-                        <Header />
+                        <Header tagline="Fresh Plants Daily" />
                         
                     </div>
-                    <Inventory />
                     <Order />
+                    <Inventory />
+                 
                 </div>
             )
 
