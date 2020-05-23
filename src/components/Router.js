@@ -8,10 +8,11 @@ const Router = () => (
     <BrowserRouter>
         <Switch>
             <Route exact path="/" component={StorePicker} />
+            <Route exact path="/store" component={App} />
             <Route path="/store/:storeId" component={App} />
-            <Route component={NotFound} />
+            <Route component={NotFound} /> 
         </Switch>
         </BrowserRouter>
 );
 
-export default Router;
+export default Router;     
