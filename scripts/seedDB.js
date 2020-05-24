@@ -8,7 +8,7 @@ mongoose.connect(
   "mongodb://localhost/plantsheets"
 );
 
-const plants = [
+const plantSeed = [
   {
     name: "Monstera",
     image: "/images/monstera.jpg",
@@ -90,9 +90,9 @@ const plants = [
   }
 ];
 
-db.Book
+db.Plants
   .remove({})
-  .then(() => db.Book.collection.insertMany(bookSeed))
+  .then(() => db.Plants.collection.insertMany(plantSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
