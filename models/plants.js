@@ -31,6 +31,6 @@ date: {
 }
 });
 
-const Plant = mongoose.model("Plant", plantSchema);
+const Plants = mongoose.model("Plants", plantSchema);
 
-module.exports = Plant;
+module.exports = Plants;
