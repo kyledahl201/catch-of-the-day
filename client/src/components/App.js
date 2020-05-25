@@ -20,7 +20,10 @@ class App extends React.Component {
        //put eupdated state into state, set new plants objects to state
        this.setState({
            plants: plants
-       })
+       });
+    };
+    loadSamplePlants = () => {
+        alert('Loading Sample')
     }
     render() {
             return(
@@ -30,7 +33,9 @@ class App extends React.Component {
                         
                     </div>
                     <MyGarden />
-                    <Inventory addPlant={this.addPlant} />
+                    <Inventory addPlant={this.addPlant}
+                    loadSamplePlants={this.loadSamplePlants}
+                    />
                  
                 </div>
             )

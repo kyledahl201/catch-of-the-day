@@ -1,5 +1,6 @@
 import React from "react";
 
+//my garden component will be updated with add plant
 class MyGarden extends React.Component {
 
     render() {
