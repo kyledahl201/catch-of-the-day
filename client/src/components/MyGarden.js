@@ -5,7 +5,7 @@ class MyGarden extends React.Component {
 
     render() {
         return (
-            <div className="MyGarden">My Garden!</div>
+            <div className="MyGarden">My Garden page!</div>
            
         );
     }
