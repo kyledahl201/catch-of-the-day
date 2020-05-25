@@ -32,8 +32,13 @@ class MyGarden extends React.Component {
     // }
     render() {
         return (
+<<<<<<< HEAD
             <div className="MyGarden">My Garden!</div>
 
+=======
+            <div className="MyGarden">My Garden page!</div>
+           
+>>>>>>> cf875d807e7266315d906fcdeab9975242511cba
         );
     }
 
