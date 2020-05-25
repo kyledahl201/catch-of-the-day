@@ -1,9 +1,10 @@
 import React from "react";
-//import axios from "axios";
+import axios from "axios";
+require('dotenv').config();
 
 //my garden component will be updated with add plant
 class MyGarden extends React.Component {
-    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~WIKIMEDIA EXAMPLE SEARCH
+    // //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~WIKIMEDIA EXAMPLE SEARCH
     // wikiSearch() {
     //     var url = "https://en.wikipedia.org/w/api.php";
 
@@ -30,10 +31,26 @@ class MyGarden extends React.Component {
     // unsplashSearch() {
 
     // }
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~TREFLE SEARCH
+    componentDidMount() {
+        var userQuery = ({search}).val().trim();
+        var trefleUrl = 'https://cors-anywhere.herokuapp.com/https://trefle.io/api/plants?q=' + userQuery + '&token=' + process.env.REACT_APP_TREFLE_KEY;
+        axios.get(trefleUrl)
+          .then(res => {
+            const plants = res.data;
+            this.setState({ plants });
+          })
+      }
+
     render() {
-        return (
+        return (<div>
             <div className="MyGarden">My Garden page!</div>
-           
+            <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Your Plant Search</h5>
+            </div>
+          </div>
+          </div>
         );
     }
 
