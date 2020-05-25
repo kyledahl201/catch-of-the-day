@@ -86,7 +86,7 @@ const plantSeed = [
 ];
 
 db.Plants
-  .deleteOne({})
+  .remove({})
   .then(() => db.Plants.collection.insertMany(plantSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
