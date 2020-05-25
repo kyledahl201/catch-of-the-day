@@ -29,7 +29,7 @@ class App extends React.Component {
     }
     render() {
             return(
-                <div className="catch-of-the-day">
+                <div className="plants-of-the-day">
                     <div className="menu">
                         <Header tagline="Fresh Plants Daily" />
                         
