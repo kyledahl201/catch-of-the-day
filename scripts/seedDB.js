@@ -85,6 +85,24 @@ const plantSeed = [
   }
 ];
 
+const userSeed = [
+  {
+    name: "Garrett",
+    image: "/images/garrett.jpg",
+    desc: "back-end dude",
+    price: 30,
+    status: "available"
+  },
+
+  {
+    name: "Kyle",
+    image: "/images/kyle.jpg",
+    desc: "front-end dude",
+    price: 25,
+    status: "available"
+  }
+];
+
 db.Plants
   .deleteOne({})
   .then(() => db.Plants.collection.insertMany(plantSeed))
