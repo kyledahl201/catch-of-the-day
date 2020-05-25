@@ -90,7 +90,11 @@ const userSeed = [
     name: "Garrett",
     image: "/images/garrett.jpg",
     desc: "back-end dude",
+<<<<<<< HEAD
     price: 30,
+=======
+    price: 69,
+>>>>>>> master
     status: "available"
   },
 
@@ -98,14 +102,30 @@ const userSeed = [
     name: "Kyle",
     image: "/images/kyle.jpg",
     desc: "front-end dude",
+<<<<<<< HEAD
     price: 25,
+=======
+    price: 420,
+>>>>>>> master
     status: "available"
   }
 ];
 
 db.Plants
-  .deleteOne({})
+  .remove({})
   .then(() => db.Plants.collection.insertMany(plantSeed))
+  .then(data => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
+
+  db.Users
+  .remove({})
+  .then(() => db.Users.collection.insertMany(userSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
