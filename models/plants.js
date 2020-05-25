@@ -9,11 +9,11 @@ name: {
   required: "Name of the plant is required."
 },
 
-image: null,
+//image: null,
 
 desc: { 
   type: String, 
-  required: "Please enter a short description of the plant (o:"
+  required: "Please enter some type of description for the plant (o:"
 },
 
 price: { 
