@@ -85,9 +85,39 @@ const plantSeed = [
   }
 ];
 
+const userSeed = [
+  {
+    name: "Garrett",
+    image: "/images/garrett.jpg",
+    desc: "back-end dude",
+    price: 69,
+    status: "available"
+  },
+
+  {
+    name: "Kyle",
+    image: "/images/kyle.jpg",
+    desc: "front-end dude",
+    price: 420,
+    status: "available"
+  }
+];
+
 db.Plants
   .remove({})
   .then(() => db.Plants.collection.insertMany(plantSeed))
+  .then(data => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
+
+  db.Users
+  .remove({})
+  .then(() => db.Users.collection.insertMany(userSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);

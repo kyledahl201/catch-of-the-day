@@ -2,7 +2,7 @@ import React from "react";
 import Header from './Header';
 import MyGarden from './MyGarden';
 import Inventory from "./Inventory";
-import samplePlants from "../sample-plants"
+import samplePlants from "../sample-plants";
 
 
 
