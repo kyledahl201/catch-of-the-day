@@ -50,7 +50,7 @@ const plants = {
       name: "Pilea Peperomia",
       image: "/images/pileaPeperomia.jpg",
       desc:
-        "Pilea peperomioides, more commonly known as Chinese money plant, pancake plant, UFO plant, lefse plant, missionary plant,' "Bender Plant"'or mirror grass, is a species of flowering plant in the nettle family Urticaceae, native to Yunnan and Sichuan provinces in southern China.",
+        "Pilea peperomioides, more commonly known as Chinese money plant, pancake plant, UFO plant, lefse plant, missionary plant, Bender Plant, or mirror grass, is a species of flowering plant in the nettle family Urticaceae, native to Yunnan and Sichuan provinces in southern China.",
       price: 75,
       status: "available"
     },
