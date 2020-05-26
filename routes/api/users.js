@@ -13,4 +13,10 @@ router
   .put(usersController.update)
   .delete(usersController.remove);
 
+router.route("/login")
+  .post(usersController.login);
+
+router.route("/getPhoto")
+  .post(usersController.getUserFromImage)
+
 module.exports = router;
