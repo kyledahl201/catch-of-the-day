@@ -55,6 +55,17 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+
+  getUserFromImage: function(req,res) {
+    console.log("get user from image test", req.body)
+    db.User
+      .find({image:req.body})
+      .then(dbModel => {
+        console.log("GIVE ME THE ID!" + dbModel)
+        res.json(getSession(dbModel))
+      })
+      .catch(err => res.status(422).json(err));
+  }
   // lastUpdatedDate = function(req, res) {
   //   this.lastUpdated = Date.now();
   
