@@ -11,22 +11,25 @@ import SignUp from "./components/SignUp";
 import SearchResults from "./components/SearchResults"
 
 class App extends React.Component {
-  //setting state from AddPlantForm
+  //first step to setting state is setting empty state
   state = {
     plants: {},
-    gardenplants: {},
+    searching: ""
   };
-  addPlant = (plant) => {
-    console.log("adding a plant");
-    //step one take copy of existing state
-    const plants = { ...this.state.plants };
-    //add new plant to plants const
-    plants[`plant${Date.now()}`] = plant;
-    //put eupdated state into state, set new plants objects to state
-    this.setState({
-      plants: plants,
-    });
-  };
+
+ // searchPlant = (search) => {
+    //     console.log("searching for a plant");
+    //       //Setting state for search value
+    //     // //1. take a copy of existing state, dont reach into state and mutate it
+    //     // //const searching = {...this.state.searching}
+    //     // //2. Add search value to that variable
+    //     // searching[`search${Date.now}`] = search
+    //     // //. Set search to state
+    //     // this.setState({
+    //     //   searching: searching
+
+    
+    
   loadSamplePlants = () => {
     // alert('Loading Sample')
     this.setState({ plants: samplePlants });
@@ -41,17 +44,13 @@ class App extends React.Component {
               <Route exact path="/" component={Login} />
               <Route exact path="/signup" component={SignUp} />
               <Route exact path="/mygarden" component={MyGarden} />
-              <Route exact path="/search" component={Search} />
+              <Route searchPlant={this.searchPlant} exact path="/search" component={Search} />
               <Route exact path="/searchresults" component={SearchResults} />
-              
               <Route component={NotFound} />
             </Switch>
           </BrowserRouter>
         </div>
-        {/* <MyGarden />
-                    <Inventory addPlant={this.addPlant}
-                    loadSamplePlants={this.loadSamplePlants}
-                    /> */}
+    
       </div>
     );
   }
