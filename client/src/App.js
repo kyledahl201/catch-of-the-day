@@ -16,19 +16,20 @@ class App extends React.Component {
     plants: {},
     searching: ""
   };
-  searchPlant = (search) => {
-    console.log("searching for a plant");
-      //Setting state for search value
-    // //1. take a copy of existing state, dont reach into state and mutate that shit
-    // //const searching = {...this.state.searching}
-    // //2. Add search value to that variable
-    // searching[`search${Date.now}`] = search
-    // //. Set search to state
-    // this.setState({
-    //   searching: searching
-    // })
-   
-  };
+
+ // searchPlant = (search) => {
+    //     console.log("searching for a plant");
+    //       //Setting state for search value
+    //     // //1. take a copy of existing state, dont reach into state and mutate it
+    //     // //const searching = {...this.state.searching}
+    //     // //2. Add search value to that variable
+    //     // searching[`search${Date.now}`] = search
+    //     // //. Set search to state
+    //     // this.setState({
+    //     //   searching: searching
+
+    
+    
   loadSamplePlants = () => {
     // alert('Loading Sample')
     this.setState({ plants: samplePlants });
