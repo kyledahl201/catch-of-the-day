@@ -8,6 +8,7 @@ import Search from "./components/Search";
 import NotFound from "./components/NotFound";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
+import SearchResults from "./components/SearchResults"
 
 class App extends React.Component {
   //setting state from AddPlantForm
@@ -41,6 +42,8 @@ class App extends React.Component {
               <Route exact path="/signup" component={SignUp} />
               <Route exact path="/mygarden" component={MyGarden} />
               <Route exact path="/search" component={Search} />
+              <Route exact path="/searchresults" component={SearchResults} />
+              
               <Route component={NotFound} />
             </Switch>
           </BrowserRouter>
