@@ -12,7 +12,7 @@ class search extends React.Component {
 
         //1.Stop form from submitting
         event.preventDefault()
-
+        //lmao
         console.log("bitch it workin 🍃")
 
         //2. get the text from the input
