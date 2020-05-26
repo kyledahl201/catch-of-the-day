@@ -1,11 +1,11 @@
 import React from "react";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import MyGarden from "./components/MyGarden";
 import Inventory from "./components/Inventory";
 import samplePlants from "./sample-plants";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Search from "./components/Search";
-import NotFound from "./components/NotFound";
+import NotFound from "./pages/NoMatch";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import SearchResults from "./components/SearchResults"
@@ -44,14 +44,10 @@ class App extends React.Component {
               <Route exact path="/" component={Login} />
               <Route exact path="/signup" component={SignUp} />
               <Route exact path="/mygarden" component={MyGarden} />
-<<<<<<< HEAD
               <Route exact path="/Search" component={Search} />
               <Route exact path="/SearchResults" component={SearchResults} />
-              
-=======
               <Route searchPlant={this.searchPlant} exact path="/search" component={Search} />
               <Route exact path="/searchresults" component={SearchResults} />
->>>>>>> a7575b4256e15df96f0f34410836f892767ded05
               <Route component={NotFound} />
             </Switch>
           </BrowserRouter>

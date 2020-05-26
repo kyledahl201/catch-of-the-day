@@ -17,16 +17,12 @@ class search extends React.Component {
             console.log(search)
 
 
-                //AXIOS GOES HEEEEEEERRRRRRREEEEEEE !!!!
+        //AXIOS GOES HEEEEEEERRRRRRREEEEEEE !!!!
 
-<<<<<<< HEAD
         //1.Stop form from submitting
         event.preventDefault()
         //lmao
         console.log("bitch it workin 🍃")
-=======
-
->>>>>>> a7575b4256e15df96f0f34410836f892767ded05
 
     }
 
