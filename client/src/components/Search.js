@@ -30,7 +30,7 @@ class search extends React.Component {
                 axios.get("/api/plantapi/" + search)
                   .then(res => {
                     const plants = res.data;
-                    // this.setState({ plants: plants });
+                    // this.setState({ plants: plants }); adding a comment
                     
                   console.log(plants)
                   }).catch(err => console.log(err))
