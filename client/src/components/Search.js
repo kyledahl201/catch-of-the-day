@@ -2,10 +2,20 @@ import React from "react";
 import {Redirect, Link} from "react-router-dom"
 import axios from 'axios'
 // import SearchForm from "./SearchForm";
-
+import PlantComponent from "./PlantComponent/Plant.js";
 
 class search extends React.Component {
+    constructor(){
+        super()
+        this.state = {
+            plants: [
+                {
+                    name: "cactus"
+                }
+            ]
 
+        }
+    }
    
     searchRef = React.createRef();
 
@@ -31,7 +41,7 @@ class search extends React.Component {
                   .then(res => {
                     const plants = res.data;
                     // this.setState({ plants: plants }); adding a comment
-                    
+                    this.setState({plants})
                   console.log(plants)
                   }).catch(err => console.log(err))
 
@@ -64,6 +74,7 @@ class search extends React.Component {
 
 
 
+
             </form>
 
 
@@ -79,7 +90,15 @@ class search extends React.Component {
 
              <br/>
 
+             <div>
+                    {this.state.plants.map(plant => (
+        <PlantComponent
+        name = {plant.common_name}
+        link = {plant.link}/>
 
+        
+      ))}
+            </div>
             <Link to="/mygarden">My Garden</Link>
 
             </div>
