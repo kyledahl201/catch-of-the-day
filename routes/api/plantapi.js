@@ -1,5 +1,5 @@
 const axios = require("axios");
-
+require('dotenv').config()
 const router = require("express").Router();
 router.get("/plantapi/:plantsearch", (req,res) => {
 
