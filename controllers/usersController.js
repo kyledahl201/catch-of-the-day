@@ -56,6 +56,12 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
 
+  lastUpdatedDate: function(req, res) {
+    this.lastUpdated = Date.now();
+  
+    return this.lastUpdated;
+
+
   getUserFromImage: function(req,res) {
     console.log("get user from image test", req.body)
     db.User
@@ -65,6 +71,7 @@ module.exports = {
         res.json(getSession(dbModel))
       })
       .catch(err => res.status(422).json(err));
+
   }
   // lastUpdatedDate = function(req, res) {
   //   this.lastUpdated = Date.now();
