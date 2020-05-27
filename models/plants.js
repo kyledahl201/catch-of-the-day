@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-//NOT SURE what to put for the image type
 const plantSchema = new Schema({
 name: { 
   type: String,
@@ -23,6 +22,10 @@ price: {
 
 status: { 
   type: Boolean 
+},
+
+image: {
+  type: {String}
 },
 
 date: { 

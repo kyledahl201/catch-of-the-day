@@ -90,11 +90,7 @@ const userSeed = [
     name: "Garrett",
     image: "/images/garrett.jpg",
     desc: "back-end dude",
-<<<<<<< HEAD
     price: 30,
-=======
-    price: 69,
->>>>>>> master
     status: "available"
   },
 
@@ -104,9 +100,6 @@ const userSeed = [
     desc: "front-end dude",
 <<<<<<< HEAD
     price: 25,
-=======
-    price: 420,
->>>>>>> master
     status: "available"
   }
 ];
